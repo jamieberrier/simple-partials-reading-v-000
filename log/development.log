@@ -891,3 +891,13 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts/12/edit" for 89.187.164.210 at 2019-11-22 20:03:01 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.erb (3.3ms)
+  Rendered posts/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
