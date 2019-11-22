@@ -787,3 +787,38 @@ Migrating to AddAuthorIdToPosts (20160119185429)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Long and Happy Life"], ["description", "A Long and Happy Life presents Rosacoke Mustian to the reading public, as well as her erstwhile boyfriend, Wesley Beavers, who gets the innocent girl pregnant. Although he condescends to marry her, he then pretty much leaves her on her own. The book is alive with local color. In one of the early, most memorable scenes, Rosacoke needs to attend a funeral at a black church on a sizzling day in summer. Her friend Mildred Sutton has died in childbirth and is to be eulogized. Wesley Beavers drives his noisy motorcycle up to deliver Rosacoke to the funeral, but he does not go inside. Instead, he lingers outside and polishes his motorcycle, which is an extension of his being. Before the services are over, he leaves precipitously to get ready for the church picnic that he and Rosacoke are to attend that afternoon. As he screeches away from the church, he raises a trail of red dust behind him that one can almost taste, so vivid is Price’s description."], ["created_at", "2019-11-22 19:58:36.626899"], ["updated_at", "2019-11-22 19:58:36.626899"], ["author_id", 2]]
   [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 89.187.164.210 at 2019-11-22 19:59:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 18ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 89.187.164.210 at 2019-11-22 19:59:48 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 471ms (Views: 465.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 89.187.164.210 at 2019-11-22 19:59:58 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 89.187.164.210 at 2019-11-22 20:00:03 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lMcH1pxkuvgdGpIBzp1QidCqXgy3fdH+IDINrMKmTIcGoqvS8kY85KYxNxzBkRVbd44K3napQU6Mc6cRGALc6Q==", "title"=>"My Article", "description"=>"bjkb/jbv", "commit"=>"Submit Post"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "My Article"], ["description", "bjkb/jbv"], ["created_at", "2019-11-22 20:00:04.003089"], ["updated_at", "2019-11-22 20:00:04.003089"], ["author_id", 1]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:44717/posts/11
+Completed 302 Found in 35ms (ActiveRecord: 7.0ms)
+
+
