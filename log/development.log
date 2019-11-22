@@ -852,3 +852,13 @@ Redirected to http://67.205.188.72:44717/posts/11
 Completed 302 Found in 13ms (ActiveRecord: 7.0ms)
 
 
+Started GET "/posts/11" for 89.187.164.210 at 2019-11-22 20:02:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
