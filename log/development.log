@@ -919,3 +919,6 @@ Processing by PostsController#show as HTML
   Rendering posts/show.html.erb within layouts/application
   [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
